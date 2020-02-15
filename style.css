@@ -1,0 +1,358 @@
+/* Inital page setup */
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/* Initial page setup ends */
+
+/* General site styles */
+
+.wrapper {
+    max-width: 1152px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+}
+
+/* General site styles end */
+
+/* Header styles */
+
+header {
+    height: 40vh;
+    background-image: url("assets/background.jpg");
+    margin-top: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: right;
+    padding-top: 80px;
+}
+
+ul {
+    margin-top: 0;
+}
+
+header ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1.5rem;
+}
+
+a:hover,
+a:focus {
+    color: #FFFFFF;
+}
+
+h1 {
+    text-align: center;
+    color: #0000CD;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 4rem;
+    margin-top: 0px;
+}
+
+/* Header styles end */
+
+
+/* Main styles */
+
+main {
+    height: 45vh;
+    background-image: url("assets/background.jpg"); 
+}
+
+.main-flex {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.flavours {
+    background: #FFB6C1;
+    padding-top: 20px;
+    max-height: 330px;
+}
+
+.flavours-box {
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.flavours h2 {
+    text-align: center;
+}
+
+.flavours,
+.about {
+    width: 40%;
+}
+
+h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+    /* Modal styles begin */
+
+    .modal {
+        visibility: hidden;
+        position: fixed;
+        z-index: 20;
+        width: 50%;
+        height: 100%;
+        overflow: auto;
+        background: #FFFFFF;
+        top: 80%;
+        bottom: 100%;
+        left: 50%;
+        right: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .modal.active {
+        visibility: visible;
+        min-width: 356px;
+    }
+
+    .modal-content {
+        visibility: hidden;
+        padding: 20px;
+    }
+
+    .modal-content.active {
+        visibility: visible;
+    }
+
+    .modal-content p {
+        font-size: 1.5rem;
+        margin-top: 70px;
+        margin-bottom: 50px;
+    }
+
+    form {
+        font-size: 1.5rem;
+    }
+
+    .email {
+        width: 70%;
+    }
+
+    .submit {
+        color: #000000;
+        background: #D3D3D3;
+    }
+
+    .submit:hover,
+    .submit:focus {
+        color: #D3D3D3;
+        background: #000000;
+    }
+
+    .open {
+        height: 100px;
+        background: #00FFFF;
+        border-radius: 20%;
+        box-shadow: 5px 5px;
+        font-size: 1.2rem;
+    }
+
+    .open:hover,
+    .open:focus {
+        background: #00CED1;
+        cursor: pointer;
+    }
+
+    .close {
+        background: #FFFFFF;
+        color: #FF0000;
+        border: solid #FF0000 2px;
+        width: 9%;
+        min-width: 55px;
+        height: 20px;
+        display: flex;
+        align-content: space-between;
+    }
+
+    .close p {
+        height: 10px;
+        margin-top: 0px;
+    }
+
+    .close:hover,
+    .close:focus {
+        cursor: pointer;
+        border: solid #000000 2px;
+        color: #000000;
+    }
+
+    .success {
+        visibility: hidden;
+        color: #008000;
+    }
+
+    .success.active {
+        visibility: visible;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+
+    .fail {
+        visibility: hidden;
+        color: #FF0000;
+    }
+
+    .fail.active {
+        visibility: visible;
+        margin-top: 0;
+    }
+
+    .modal-overlay {
+        width: 100%;
+        height: 100%;
+        background: #000000;
+        top: 0;
+        left: 0;
+        position: fixed;
+        z-index: 10;
+        opacity: 55%;
+        visibility: hidden;
+    }
+
+    .modal-overlay.active {
+        visibility: visible;
+    }
+
+    /* Modal styles end */
+
+.about {
+    background: #00FA9A;
+    padding: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+}
+
+/* Main styles end */
+
+
+/* Footer styles */
+
+footer {
+    height: 20vh;
+    background-image: url("assets/background.jpg");
+    text-align: center;
+    padding-top: 10px;
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+footer p {
+    font-size: 1.1rem;
+}
+
+/* Footer styles end */
+
+/* Media queries for responsive design */
+
+@media (max-width: 1430px) {
+    .flavours {
+        min-width: 260px;
+    }
+
+    .about {
+        min-width: 260px;
+    }
+}
+
+@media (max-width: 1150px) {
+    nav {
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 995px) {
+    header {
+        height: 30vh;
+    }
+
+    h1 {
+        margin-bottom: 5px;
+    }
+
+    main {
+        height: 120vh;
+    }
+
+    .main-flex {
+        justify-content: flex-start;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 50%;
+        align-content: center;
+    }
+}
+
+@media (max-width: 860px) {
+    main {
+        height: 120vh;
+    }
+
+    .main-flex {
+        justify-content: flex-start;
+        align-content: center;
+    }
+}
+
+@media (max-width: 750px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 715px) {
+    .email {
+        width: 90%;
+    }
+}
+
+@media (max-width: 515px) {
+    header {
+        height: 35vh;
+    }
+}
+
+@media (max-width: 450px) {
+    h1 {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+    nav ul {
+        padding-left: 20px;
+    }
+}
+
