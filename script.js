@@ -6,14 +6,14 @@ iceCreamModal.formSubmit();
 
 // Open modal when open button is clicked
 $(".open").on("click", function(){
-    $(".modal, .modal-content, .modal-overlay").addClass("active");
+    $(".modal, .modal-overlay").addClass("active");
     // Load cursor in input
     $("#email").focus();
     });
 
 // Close modal when close buton is clicked
 $(".close").on("click", function(){
-    $(".modal, .modal-content, .success, .fail, .modal-overlay").removeClass("active");
+    $(".modal, .success, .fail, .modal-overlay").removeClass("active");
     });
 
 // On form submit:
@@ -23,7 +23,7 @@ iceCreamModal.formSubmit = function() {
         e.preventDefault();
 
         // Make sure email field is not blank.
-        // Confirmation message.
+        // Confirmation message
         if (email.value == ("")) {
             $(".fail").addClass("active") && $(".success").removeClass("active");
         } else {
