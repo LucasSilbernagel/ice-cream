@@ -30,7 +30,6 @@ iceCreamModal.formSubmit = function() {
         } 
 
         // Clear input after submit
-        const inputReset = $('#email').val();
         $('#email').val('');
     })
 }
