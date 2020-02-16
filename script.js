@@ -22,8 +22,9 @@ iceCreamModal.formSubmit = function() {
     $('form').on('submit', function(e) {
         e.preventDefault();
 
-        // Validate email 
-        if (email.value == ("") || email.value.indexOf('@') === -1) {
+        // Make sure email field is not blank.
+        // Confirmation message.
+        if (email.value == ("")) {
             $(".fail").addClass("active") && $(".success").removeClass("active");
         } else {
             $(".success").addClass("active") && $(".fail").removeClass("active");
