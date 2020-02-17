@@ -133,12 +133,7 @@ h2 {
     }
 
     .modal-content {
-        visibility: hidden;
         padding: 20px;
-    }
-
-    .modal-content.active {
-        visibility: visible;
     }
 
     .modal-content p {
