@@ -157,6 +157,7 @@ h2 {
     .submit:focus {
         color: #D3D3D3;
         background: #000000;
+        cursor: pointer;
     }
 
     .open {
@@ -174,26 +175,21 @@ h2 {
     }
 
     .close {
-        background: #FFFFFF;
-        color: #FF0000;
-        border: solid #FF0000 2px;
-        width: 9%;
-        min-width: 55px;
-        height: 20px;
-        display: flex;
-        align-content: space-between;
+        height: 40px;
+        width: 40px;
+        min-width: 40px;
+        float: right;
     }
 
-    .close p {
-        height: 10px;
-        margin-top: 0px;
+    .x {
+        font-size: 1.4rem;
     }
 
     .close:hover,
     .close:focus {
         cursor: pointer;
-        border: solid #000000 2px;
-        color: #000000;
+        color: #D3D3D3;
+        background: #000000;
     }
 
     .success {
@@ -327,6 +323,10 @@ footer p {
     .modal {
         height: 60%;
         width: 70%;
+    }
+
+    .close {
+        float: left;
     }
 
     .email {
