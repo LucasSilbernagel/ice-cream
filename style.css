@@ -114,17 +114,15 @@ h2 {
 
     .modal {
         visibility: hidden;
-        position: fixed;
         z-index: 20;
         width: 50%;
-        height: 100%;
+        height: 60%;
         overflow: auto;
         background: #FFFFFF;
-        top: 80%;
-        bottom: 100%;
+        top: 50%;
         left: 50%;
-        right: 50%;
         transform: translate(-50%, -50%);
+        position: absolute;
     }
 
     .modal.active {
@@ -200,22 +198,26 @@ h2 {
 
     .success {
         visibility: hidden;
+        display: none;
         color: #008000;
     }
 
     .success.active {
         visibility: visible;
+        display: inline-block;
         margin-top: 5px;
         margin-bottom: 0;
     }
 
     .fail {
         visibility: hidden;
+        display: none;
         color: #FF0000;
     }
 
     .fail.active {
         visibility: visible;
+        display: inline-block;
         margin-top: 0;
     }
 
@@ -298,11 +300,12 @@ footer p {
     }
 
     main {
-        height: 120vh;
+        height: 130vh;
     }
 
     .main-flex {
-        justify-content: flex-start;
+        height: 125vh;
+        justify-content: flex-start space-between;
         flex-direction: column;
         margin: 0 auto;
         width: 50%;
@@ -312,18 +315,36 @@ footer p {
 
 @media (max-width: 860px) {
     main {
-        height: 120vh;
+        height: 130vh;
     }
 
     .main-flex {
-        justify-content: flex-start;
+        height: 125vh;
+        justify-content: flex-start space-between;
         align-content: center;
+    }
+
+    .modal {
+        height: 60%;
+        width: 70%;
+    }
+
+    .email {
+        width: 90%;
+    }
+
+    .fail.fail.active {
+        margin-bottom: 0;
     }
 }
 
 @media (max-width: 750px) {
     h1 {
         font-size: 2.7rem;
+    }
+
+    .email {
+        width: 90%;
     }
 }
 
