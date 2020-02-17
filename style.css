@@ -298,11 +298,12 @@ footer p {
     }
 
     main {
-        height: 120vh;
+        height: 130vh;
     }
 
     .main-flex {
-        justify-content: flex-start;
+        height: 125vh;
+        justify-content: flex-start space-between;
         flex-direction: column;
         margin: 0 auto;
         width: 50%;
@@ -312,11 +313,12 @@ footer p {
 
 @media (max-width: 860px) {
     main {
-        height: 120vh;
+        height: 130vh;
     }
 
     .main-flex {
-        justify-content: flex-start;
+        height: 125vh;
+        justify-content: flex-start space-between;
         align-content: center;
     }
 }
