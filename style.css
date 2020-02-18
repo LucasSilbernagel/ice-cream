@@ -128,6 +128,8 @@ h2 {
     .modal.active {
         visibility: visible;
         min-width: 356px;
+        animation-name: slidein;
+        animation-duration: 0.5s
     }
 
     .modal-content {
@@ -174,13 +176,15 @@ h2 {
         cursor: pointer;
     }
 
+    /* Modal Animation */
+    @keyframes slidein {
+        from {top: -800px; opacity: 0}
+        to {top: -900; opacity: 1}
+    }
+
     .close {
         font-size: 2rem;
         float: right;
-    }
-
-    .x {
-        font-size: 1.4rem;
     }
 
     .close:hover,
@@ -307,11 +311,11 @@ footer p {
 
 @media (max-width: 860px) {
     main {
-        height: 130vh;
+        height: 135vh;
     }
 
     .main-flex {
-        height: 125vh;
+        height: 130vh;
         justify-content: flex-start space-between;
         align-content: center;
     }
@@ -365,6 +369,10 @@ footer p {
 @media (max-width: 400px) {
     nav ul {
         padding-left: 20px;
+    }
+
+    .modal.active {
+        min-width: 320px;
     }
 }
 
