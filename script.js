@@ -12,7 +12,8 @@ $(".open").on("click", function(){
     });
 
 // Close modal when close buton is clicked
-$(".close").on("click", function(){
+// or when user clicks outside of modal
+$(".close, .modal-overlay").on("click", function(){
     $(".modal, .success, .fail, .modal-overlay").removeClass("active");
     });
 
