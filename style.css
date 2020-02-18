@@ -175,9 +175,7 @@ h2 {
     }
 
     .close {
-        height: 40px;
-        width: 40px;
-        min-width: 40px;
+        font-size: 2rem;
         float: right;
     }
 
@@ -188,8 +186,6 @@ h2 {
     .close:hover,
     .close:focus {
         cursor: pointer;
-        color: #D3D3D3;
-        background: #000000;
     }
 
     .success {
