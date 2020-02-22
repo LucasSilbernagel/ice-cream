@@ -4,6 +4,35 @@ iceCreamModal.init = function() {
 iceCreamModal.formSubmit();
 }
 
+
+const docwidth = window.innerWidth;
+const docheight = window.innerHeight;
+function pheigt_init() {    
+    pheigt_set_prevent_height();
+    window.onresize = function() {
+        if (docwidth !== window.innerWidth || docheight < window.innerHeight) {
+            pheigt_upd_prevent_height();
+        }
+    };
+  }
+  function pheigt_set_prevent_height() {
+    document.querySelectorAll('.pheight').forEach(function(node) {
+     node.style.height = node.offsetHeight + 'px';
+    });
+  }
+  function pheigt_upd_prevent_height() {
+    document.querySelectorAll('.pheight').forEach(function(node) {
+        node.style.removeProperty('height');
+    }); 
+    setTimeout(function(){ pheigt_set_prevent_height(); }, 100);
+    docheight = window.innerHeight;
+    docwidth = window.innerWidth;
+  }
+  document.addEventListener('DOMContentLoaded', pheigt_init());
+
+
+
+
 // Open modal when open button is clicked
 $(".open").on("click", function(){
     $(".modal, .modal-overlay").addClass("active");
@@ -12,7 +41,8 @@ $(".open").on("click", function(){
     });
 
 // Close modal when close buton is clicked
-$(".close").on("click", function(){
+// or when user clicks outside of modal
+$(".close, .modal-overlay").on("click", function(){
     $(".modal, .success, .fail, .modal-overlay").removeClass("active");
     });
 
