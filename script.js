@@ -4,8 +4,6 @@ const iceCreamModal = {};
 iceCreamModal.openModal = function () {
     $(".open").on("click", function(){
         $(".modal, .modal-overlay").addClass("active");
-        // Load cursor in input
-        $("#email").focus();
         });
 }
 
