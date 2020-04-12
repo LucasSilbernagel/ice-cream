@@ -38,10 +38,12 @@ iceCreamModal.formSubmit = function() {
 
 iceCreamModal.mobileForm = function () {
     // Maintain normal viewport sizing when virtual keyboard opens on mobile
-    let viewHeight = $(window).height();
-    let viewWidth = $(window).width();
-    let viewport = document.querySelector("meta[name=viewport]");
-    viewport.setAttribute("content", "height=" + viewHeight + "px, width=" + viewWidth + "px, initial-scale=1.0");
+    setTimeout(function () {
+        let viewheight = $(window).height();
+        let viewwidth = $(window).width();
+        let viewport = document.querySelector("meta[name=viewport]");
+        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+        }, 300);
 }
 
 iceCreamModal.init = function () {
