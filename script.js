@@ -1,26 +1,26 @@
 const iceCreamModal = {};
 
-iceCreamModal.init = function() {
-iceCreamModal.formSubmit();
+// Open modal when open button is clicked
+iceCreamModal.openModal = function () {
+    $(".open").on("click", function(){
+        $(".modal, .modal-overlay").addClass("active");
+        // Load cursor in input
+        $("#email").focus();
+        });
 }
 
-// Open modal when open button is clicked
-$(".open").on("click", function(){
-    $(".modal, .modal-overlay").addClass("active");
-    // Load cursor in input
-    $("#email").focus();
-    });
-
 // Close modal when close buton is clicked
-// or when user clicks outside of modal
-$(".close, .modal-overlay").on("click", function(){
-    $(".modal, .success, .fail, .modal-overlay").removeClass("active");
-    });
+iceCreamModal.closeModal = function () {
+    // or when user clicks outside of modal
+    $(".close, .modal-overlay").on("click", function(){
+        $(".modal, .success, .fail, .modal-overlay").removeClass("active");
+        });
+}
 
 // On form submit:
-// Don't refresh the page
 iceCreamModal.formSubmit = function() {
-    $('form').on('submit', function(e) {
+    $('form').on('submit', function (e) {
+        // Don't refresh the page
         e.preventDefault();
 
         // Make sure email field is not blank.
@@ -36,15 +36,24 @@ iceCreamModal.formSubmit = function() {
     })
 }
 
-$(function() {
-    iceCreamModal.init();
-
+iceCreamModal.mobileForm = function () {
     // Maintain normal viewport sizing when virtual keyboard opens on mobile
     setTimeout(function () {
-        let viewheight = $(window).height();
-        let viewwidth = $(window).width();
+        let viewHeight = $(window).height();
+        let viewWidth = $(window).width();
         let viewport = document.querySelector("meta[name=viewport]");
-        viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+        viewport.setAttribute("content", "height=" + viewHeight + "px, width=" + viewWidth + "px, initial-scale=1.0");
     }, 300);
+}
 
-    });
+iceCreamModal.init = function () {
+    iceCreamModal.openModal();
+    iceCreamModal.formSubmit();
+    iceCreamModal.closeModal();
+    iceCreamModal.mobileForm();
+}
+
+// Document ready
+$(function() {
+    iceCreamModal.init();
+});
