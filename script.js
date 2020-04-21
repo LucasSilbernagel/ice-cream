@@ -4,6 +4,7 @@ const iceCreamModal = {};
 iceCreamModal.openModal = function () {
     $(".open").on("click", function(){
         $(".modal, .modal-overlay").addClass("active");
+        $("header, main, footer").attr("aria-hidden", "true");
         });
 }
 
@@ -12,6 +13,7 @@ iceCreamModal.closeModal = function () {
     // or when user clicks outside of modal
     $(".close, .modal-overlay").on("click", function(){
         $(".modal, .success, .fail, .modal-overlay").removeClass("active");
+        $("header, main, footer").attr("aria-hidden", "false");
         });
 }
 
