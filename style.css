@@ -51,6 +51,12 @@ ul {
     margin-top: 0;
 }
 
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+}
+
 header ul {
     list-style: none;
 }

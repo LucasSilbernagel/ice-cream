@@ -17,13 +17,9 @@
                     <li>
                         <a href="#home">Home</a>
                     </li>
-                </ul>
-                <ul>
                     <li>
                         <a href="#about">About</a>
                     </li>
-                </ul>
-                <ul>
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
@@ -74,11 +70,13 @@
     <!-- Modal -->
     <div class="modal">
         <!-- The modal content -->
-        <div class="modal-content">
-            <span class="close" aria-label="Close">&times;</span>
-            <p>Sign up for our monthly newsletter, including coupons and special events!</p>
+        <div class="modal-content" aria-label="newsletter signup screen">
+            <span class="close" aria-label="To close newsletter screen, press control option space.">&times;</span>
+            <p tabindex="0">Sign up for our monthly newsletter, including coupons and special events!</p>
             <form action="#" id="form" for="email">
+                <label for="email" id="email" class="sr-only">Email</label>
                 <input title="email" type="email" name="email" class="email" id="email" placeholder="Your email address" for="email">
+                <label for="submit" id="submit" class="sr-only">submit</label>
                 <input type="submit" value="submit" class="submit" name="submit" id="submit">
                 <p class="success" id="success">Sign up complete!</p>
                 <p class="fail" id="fail">Please enter an email address!</p>
