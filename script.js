@@ -1,11 +1,20 @@
+// Namespace
 const iceCreamModal = {};
+
+// Elements to remove from tab order when modal is open
+const backgroundElements = $("a, .open")
 
 // Open modal when open button is clicked
 iceCreamModal.openModal = function () {
     $(".open").on("click", function(){
         $(".modal, .modal-overlay").addClass("active");
-        $("header, main, footer").attr("aria-hidden", "true");
+
+        // Focus on "close modal" button
         $(".close").focus();
+
+        // Trap focus inside modal when open
+        $("header, main, footer").attr("aria-hidden", "true");
+        backgroundElements.attr("tabindex", "-1");
         });
 }
 
@@ -14,7 +23,10 @@ iceCreamModal.closeModal = function () {
     // or when user clicks outside of modal
     $(".close, .modal-overlay").on("click", function(){
         $(".modal, .success, .fail, .modal-overlay").removeClass("active");
+
+        // When modal is closed, allow focus on all page elements
         $("header, main, footer").attr("aria-hidden", "false");
+        backgroundElements.attr("tabindex", "0");
         });
 }
 
