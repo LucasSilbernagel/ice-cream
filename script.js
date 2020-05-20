@@ -5,6 +5,7 @@ iceCreamModal.openModal = function () {
     $(".open").on("click", function(){
         $(".modal, .modal-overlay").addClass("active");
         $("header, main, footer").attr("aria-hidden", "true");
+        $(".close").focus();
         });
 }
 
