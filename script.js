@@ -30,8 +30,22 @@ iceCreamModal.closeModal = function () {
         });
 }
 
+// Close modal when escape key is pressed
+iceCreamModal.escapeModal = function () {
+
+    $(document).keydown(function(event) { 
+        if (event.keyCode == 27) { 
+            $(".modal, .success, .fail, .modal-overlay").removeClass("active");
+
+            // When modal is closed, allow focus on all page elements
+            $("header, main, footer").attr("aria-hidden", "false");
+            backgroundElements.attr("tabindex", "0");
+        }
+    });
+}
+
 // On form submit:
-iceCreamModal.formSubmit = function() {
+iceCreamModal.formSubmit = function () {
     $('form').on('submit', function (e) {
         // Don't refresh the page
         e.preventDefault();
@@ -63,6 +77,7 @@ iceCreamModal.init = function () {
     iceCreamModal.openModal();
     iceCreamModal.formSubmit();
     iceCreamModal.closeModal();
+    iceCreamModal.escapeModal();
     iceCreamModal.mobileForm();
 }
 
